@@ -20,7 +20,7 @@ while True:
         quantia = float(input("Digite a quantia a ser depositada: "))
         if quantia > 0:
             saldo += quantia
-            extrato += f""" Deposito de R${quantia}   \n"""
+            extrato += f""" Deposito de R${quantia:.2f}   \n"""
             print(f'R${quantia:.2f} Depositado com sucesso \n')
         else:
             print("Não é possivel depositar valores negativos")
@@ -33,7 +33,7 @@ while True:
                 if quantia <= LIMITE and saldo >= quantia:
                     saldo-=quantia
                     numero_saques+=1
-                    extrato += f""" Saque de R${quantia} \n"""
+                    extrato += f""" Saque de R${quantia:.2f} \n"""
                     print(f"R${quantia:.2f} retirada com sucesso")
                 else:
                     print("Saldo insuficiente ou limite excedido")
