@@ -43,8 +43,10 @@ while True:
             print("Quantia a ser retirada não pode ser menor ou igual a 0")
 
     elif opcao == 'e':
-
-        print(extrato + f"\n   Saldo: R${saldo:.2f}   ")
+        if extrato != "":
+            print(extrato + f"\n   Saldo: R${saldo:.2f}   ")
+        else:
+            print(f"""       Nenhuma movimentação realizada até o momento      \n       Saldo: R${saldo:.2f}""" )
 
     elif opcao == 'q':
         print("Saindo")
